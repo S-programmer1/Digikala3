@@ -1,0 +1,1658 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Iransans;
+}
+@font-face {
+  font-family: "Iransans";
+  src: url(../fonts/woff/IRANSansXNoEn-Regular.woff);
+}
+/* part1 (menu sticky) */
+div.box0 {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: white;
+}
+div.box1 > a{
+  text-decoration: none;
+}
+div.box1 > a>img {
+  width: 100%;
+}
+div.box2 {
+  height: 68px;
+  display: flex;
+  align-items: center;
+  gap:41%;
+  padding: 12px 0;
+}
+div.box2 >div.item1{
+  width: 45%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+}
+div.box2 >div.item1> a{
+  text-decoration: none;
+}
+div.box2 >div.item1> a>img {
+  height: 30px;
+}
+div.box2 > div.item1>div {
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f1;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 2%;
+
+}
+div.box2 > div.item1 >div> input {
+  height: 100%;
+  width: 90%;
+  background-color: #f0f0f1;
+  border: none;
+  direction: rtl;
+  border-radius: 10px;
+  color: gray;
+  font-size: large;
+  padding: 0 10px;
+}
+div.box2>span{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+a.link1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  text-decoration: none;
+  color: black;
+  border: lightgray 1px solid;
+  gap: 10px;
+  font-size: small;
+  padding: 10px;
+}
+
+a.link2 {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  border-right: lightgray 1px solid;
+  padding: 0 10px;
+}
+/* part2 (menu) */
+div.box3 {
+  height: 30px;
+  direction: rtl;
+  display: flex;
+  align-items: center;
+  gap: 12%;
+  border-bottom: 1px rgb(141, 139, 139) solid;
+  margin-bottom: 10px;
+}
+div.box3 > ul {
+  height: 100%;
+  width: 75%;
+  /* padding-right: 1%; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0.2%;
+}
+
+div.box3 > ul > li {
+  height: 100%;
+  display: flex;
+  text-align: center;
+  vertical-align: top;
+  font-size: 11px;
+  padding: 0 2px;
+  color: #a0a3a7;
+  transition: 300ms;
+}
+div.box3 > ul > li:nth-child(2) {
+  border-right: 1px lightgray solid;
+}
+div.box3 > ul > li:nth-child(7) {
+  border-right: 1px lightgray solid;
+}
+div.box3 > ul > li > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: top;
+  text-decoration: none;
+  gap: 5px;
+  position: relative;
+  transition: 300ms;
+  color:#a0a3a7 ;
+  padding: 0 12px;
+}
+div.box3 > ul >li:nth-child(1)>a {
+  color: black;
+}
+div.box3 > ul > li > a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: red;
+  left: 0;
+  bottom: 0;
+  transition: 300ms;
+}
+div.box3 > ul > li > a:hover::after {
+  width: 100%;
+}
+div.box3 > a {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+  gap: 2%;
+}
+/*submenu*/
+div.box3 > ul > li:nth-child(1):hover div.submenu {
+  /* background-color: blue; */
+  background-color: whitesmoke;
+  height: 550px;
+}
+div.box3 > ul > li > div.submenu {
+  height: 0px;
+  width: 1100px;
+
+  /* background-color: blueviolet; */
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  z-index: 998;
+  position: absolute;
+  bottom: 7px;
+}
+div.box3 > ul > li > div.submenu > ul {
+  height: 100%;
+  width: 15%;
+  /* background-color: lightblue; */
+}
+div.box3 > ul > li > div.submenu > ul > li {
+  height: 50px;
+  /* background-color: pink; */
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+}
+div.box3 > ul > li > div.submenu > ul > li > a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: lightgreen; */
+}
+div.box3 > ul > li > div.submenu > ul > li.n1 > div.firstitem {
+  height: 0;
+  width: 0;
+  /* background-color: pink; */
+  position: absolute;
+  right: 163px;
+  overflow-y: scroll;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+}
+div.box3 > ul > li > div.submenu > ul > li.n1:hover > div.firstitem {
+  width: 920px;
+
+  height: 550px;
+}
+div.box3 > ul > li > div.submenu > ul > li.n1:hover >a{
+  color: red;
+  background-color: white;
+}
+div.box3 > ul > li > div.submenu > ul > li.n1 > div.firstitem > a {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  text-decoration: none;
+  color: #18bfd3;
+}
+div.box3 > ul > li > div.submenu > ul > li.n1 > div.firstitem > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+div.box3 > ul > li > div.submenu > ul > li.n1 > div.firstitem > div > div {
+  height: 100%;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding: 5px 0;
+}
+div.box3 > ul > li > div.submenu > ul > li.n1 > div.firstitem > div > div > a {
+  width: 100%;
+  height: 100%;
+  direction: rtl;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  text-decoration: none;
+  color: gray;
+  padding: 5px;
+}
+div.box3
+  > ul
+  > li
+  > div.submenu
+  > ul
+  > li.n1
+  > div.firstitem
+  > div
+  > div
+  > a:hover {
+  color: red;
+}
+
+div.box3
+  > ul
+  > li
+  > div.submenu
+  > ul
+  > li.n1
+  > div.firstitem
+  > div
+  > div
+  > span {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  text-decoration: none;
+  color: black;
+  font-size: larger;
+  border-right: 2px red solid;
+  padding: 0 5px;
+}
+div.box3
+  > ul
+  > li
+  > div.submenu
+  > ul
+  > li.n1
+  > div.firstitem
+  > div
+  > div
+  > span>a{
+    text-decoration: none;
+    color: black;
+  }
+/* part3 (swiper one) */
+div.box4 {
+  height: 145px;
+  direction: rtl;
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+
+div.n1 {
+  width: 100px;
+  height: 120px;
+  position: relative;
+}
+div.n1 > a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: start;
+  flex-flow: column;
+  gap: 8%;
+}
+div.n1 > a > div.image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 3px purple solid;
+}
+div.n1 > a > div.image > img {
+  width: 95%;
+  height: 95%;
+  border-radius: 50%;
+}
+div.n1 > a > p {
+  font-size: 11.5px;
+  direction: rtl;
+}
+div.n1 > a > div.note {
+  width: 40px;
+  height: 20px;
+  background-color: rgb(253, 217, 222);
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: white 2px solid;
+}
+div.n1 > a > div.note > p {
+  font-size: 12px;
+  color: rgb(235, 35, 135);
+  font-weight: bold;
+}
+div.n2 {
+  width: 100px;
+  height: 120px;
+}
+div.n2 > a {
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+  align-items: start;
+  flex-flow: column;
+  gap: 8%;
+  color: black;
+}
+div.n2 > a > div {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 3px purple solid;
+}
+div.n2 > a > div > img {
+  width: 95%;
+  height: 95%;
+
+  border-radius: 50%;
+}
+div.n2 > a > p {
+  font-size: 12px;
+  direction: rtl;
+  color: black;
+}
+/* part4 (swiper2 photos) */
+div.box5 {
+  height: 400px;
+  direction: rtl;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-button-next {
+  background-image: url(../media/svgexport-14.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  padding: 20px;
+  background-color: whitesmoke;
+  border-radius: 50%;
+  border: 1px lightgray solid;
+}
+.swiper-button-next::after {
+  display: none;
+}
+.swiper-button-prev {
+  background-image: url(../media/svgexport-15.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  padding: 20px;
+  background-color: whitesmoke;
+  border-radius: 50%;
+  border: 1px lightgray solid;
+}
+.swiper-button-prev::after {
+  display: none;
+}
+/* part5  */
+div.box6 {
+  height: 140px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  justify-content: space-around;
+  direction: rtl;
+  padding: 20px 10px;
+}
+div.box6 > div {
+  height: 100%;
+  width: 6%;
+}
+div.box6 > div > a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+div.box6 > div > a > img {
+  width: 52px;
+  height: 52px;
+}
+div.box6 > div > a > p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.box6 > div:nth-child(10) > a > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  background-color: lightgray;
+  border-radius: 50%;
+}
+/* part6 (pishnehad shegeft angiz swiper) */
+div.box7 {
+  height: 300px;
+  background-color: crimson;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: rtl;
+  border-radius: 18px;
+  direction: rtl;
+}
+
+div.n3 > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2px;
+  text-decoration: none;
+  color: black;
+  padding: 6%;
+}
+div.n3 > a > img {
+  width: 100%;
+  height: 100%;
+}
+div.n3 > a > p {
+  direction: rtl;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  font-size: 14px;
+  color: black;
+}
+div.n3 > a > div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+div.n3 > a > div > span {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  gap: 4%;
+}
+div.n3 > a > div > span > img {
+  width: 15px;
+  height: 15px;
+}
+div.n3 > a > div > span > p {
+  font-size: 16px;
+  color: black;
+}
+div.n3 > a > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 37px;
+  height: 19px;
+  background-color: rgb(211, 48, 47);
+  color: white;
+  border-radius: 10px;
+  font-size: 14px;
+}
+div.n3 > a > span {
+  width: 100%;
+  font-size: 15px;
+  margin-right: 68px;
+  color: gray;
+  text-decoration: line-through;
+  /* margin-right: 45%; */
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-right: 0;
+  padding: 0 15%;
+}
+div.n4 {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 90px AUTO;
+}
+div.n4 > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: black;
+}
+div.n4 > a > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: aqua 2px solid;
+}
+div.n4 > a > div > img {
+  width: 40px;
+  height: 40px;
+}
+div.n4 > a > p {
+  font-size: large;
+}
+div.n5 {
+  width: 100%;
+  height: 100%;
+  background-color: crimson;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2%;
+}
+div.n5 > img {
+  width: 100px;
+  height: 100px;
+}
+div.n5 > div.clock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 2px;
+}
+div.n5 > div.clock > div {
+  background-color: white;
+  padding: 2px;
+  border-radius: 5px;
+}
+div.n5 > div.clock > p {
+  color: white;
+}
+div.n5 > a {
+  width: 70%;
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  direction: rtl;
+  text-decoration: none;
+  color: white;
+}
+div.n5 > a > p {
+  color: white;
+  font-size: small;
+}
+div.n5 > a > img {
+  width: 20px;
+  height: 20px;
+}
+.border-right {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.border-left {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+/* part7 (shegeft angiz supermarkety) */
+div.box8 {
+  margin: 15px 0;
+  height: 120px;
+  background-image: url(../media/freshPattern.svg);
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-color: #edeeee;
+  border-radius: 18px;
+}
+div.box8 > a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  direction: rtl;
+  text-decoration: none;
+}
+div.box8 > a > div.n6 {
+  width: 37%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  direction: rtl;
+  gap: 5%;
+}
+
+div.box8 > a > div.n6 > span {
+  padding: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: green;
+  border-radius: 18px;
+  color: white;
+}
+div.box8 > a > div.n7 {
+  width: 45%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  direction: rtl;
+  gap: 1%;
+}
+div.box8 > a > div.n7 > div {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: white;
+  border-radius: 50%;
+  position: relative;
+
+}
+div.box8 > a > div.n7 > div > img {
+  width: 71%;
+  height: 71%;
+}
+div.box8 > a > div.n7 > div > span {
+  background-color: rgb(211, 48, 47);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 50px;
+  left: 34px;
+  padding:0 5px;
+}
+div.box8 > a > div.n7 > span {
+  padding: 2%;
+  background-color: white;
+  border-radius: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: green;
+}
+/* part8 (4photos) */
+div.box9 {
+  height: 300px;
+  display: flex;
+  padding: 0 10px;
+  gap: 1%;
+}
+div.box9 > a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+
+}
+div.box9 > a > img {
+  height: 100%;
+  width: 100%;
+  border-radius: 18px;
+}
+/* part9 (kharid bar asas dasteh bandi) */
+div.box10 {
+  height: 470px;
+  padding: 0 90px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+div.box10 > h1 {
+  text-align: center;
+}
+div.box10 > div.n8 {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 3%;
+}
+div.box10 > div.n8 > a {
+  text-decoration: none;
+  display: flex;
+  color: black;
+}
+div.box10 > div.n8 > a > div {
+  width: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2%;
+  text-align: center;
+}
+div.box10 > div.n8 > a > div > img {
+  width: 100%;
+}
+
+div.box10 > div.n9 {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 3%;
+}
+div.box10 > div.n9 > a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+}
+div.box10 > div.n9 > a > div {
+  width: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2%;
+  text-align: center;
+}
+div.box10 > div.n9 > a > div > img {
+  width: 100%;
+}
+/* part10 (2photos) */
+div.box11 {
+  margin: 20px 0;
+  height: 270px;
+  display: flex;
+  gap: 2%;
+}
+div.box11 >a{
+  text-decoration: none;
+}
+div.box11 >a> img {
+  width: 100%;
+  border-radius: 18px;
+}
+/* part11 (mahbob tarin brand ha) */
+div.box12 {
+  text-align: center;
+  border: 1px lightgray solid;
+  border-radius: 18px;
+  margin: 20px 0;
+}
+div.box12 > p {
+  font-size: x-large;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:1%;
+}
+div.box12 > div.box13 {
+  margin: 15px;
+  height: 150px;
+  background-color: lightgray;
+  direction: rtl;
+}
+div.box12 a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.box12 a > img {
+  width: 80%;
+  height: 75%;
+}
+/* part12 (2photos) */
+div.box14 {
+  margin-bottom: 20px;
+  height: 300px;
+  display: flex;
+  gap: 2%;
+}
+div.box14 > a{
+  text-decoration: none;
+}
+div.box14 > a> img {
+  width: 100%;
+  border-radius: 18px;
+}
+/* part13 (bar asas saligheh shoma) */
+div.box15 {
+  height: 500px;
+  direction: rtl;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border: 1px lightgray solid;
+  border-radius: 18px;
+  line-height: 33px;
+}
+
+div.box15 > div > p {
+  color: gray;
+}
+div.box15 > div {
+  width: 25%;
+  height: 100%;
+  border-right: 1px lightgray solid;
+  gap: 10px;
+  padding: 10px;
+}
+div.box15 > div > div {
+  width: 80%;
+  height: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto;
+}
+div.box15 > div > div > a {
+  flex-grow: 2;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-right: 1px lightgray solid;
+  border-top: 1px lightgray solid;
+  padding: 8px;
+}
+div.box15 > div > div > a:nth-child(2n + 1) {
+  border-right: none;
+}
+div.box15 > div > div > a:nth-child(2) {
+  border-top: none;
+}
+div.box15 > div > div > a:nth-child(1) {
+  border-top: none;
+}
+
+div.box15 > div > div > a > img {
+  width: 100%;
+}
+div.box15 > div > a {
+  margin-top: 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #18bfd3;
+}
+
+/* part14 (digiclub) */
+div.box16 {
+  height: 100px;
+  background-image: linear-gradient(to right, #35a6c8, #007295);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 25%;
+  margin: 20px 0;
+}
+div.box16 > div {
+  width: 60%;
+  height: 75%;
+  display: flex;
+  align-items: center;
+  gap: 1%;
+  flex-direction: row-reverse;
+}
+div.box16 > div > div {
+  width: 40%;
+  height: 100%;
+  background-color: white;
+  padding: 5px;
+}
+.border-right1 {
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+.border-left1 {
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
+}
+div.box16 > div > div > a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: black;
+}
+div.box16 > div > div > a > img {
+  width: 60%;
+  height: 100%;
+}
+div.box16 > div > div > a > p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+/* part15 (porforoosh tarin kala ha) */
+div.box17 {
+  height: 405px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 18px;
+  border: 1px lightgray solid;
+  margin-bottom: 20px;
+}
+div.box17 > span {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  padding-right: 40%;
+}
+div.box17 > span > p {
+  display: flex;
+  align-items: center;
+  font-size: x-large;
+  gap: 5px;
+  text-align: center;
+}
+div.box17 > span > a {
+  text-decoration: none;
+  color: #18bfd3;
+}
+div.box17 > div {
+  width: 100%;
+  height: 90%;
+  direction: rtl;
+}
+
+div.box17 > div > div > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-evenly;
+
+  gap: 2px;
+}
+div.box17 > div div > div > div > a {
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+div.box17 > div div > div > div > a > img {
+  width: 90px;
+  height: 90px;
+}
+div.box17 > div div > div > div > a > span {
+  font-size: x-large;
+  font-weight: bold;
+  color: #18bfd3;
+}
+div.box17 > div div > div > div > a > p {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  height: 100%;
+  border-bottom: 1px lightgray solid;
+  padding: 5px;
+}
+div.box17 > div div > div > div > a > p.no-border {
+  border: none;
+}
+/* part16 (bar asas saligheh shoma) */
+div.box18 {
+  height: 500px;
+  direction: rtl;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border: 1px lightgray solid;
+  border-radius: 18px;
+  line-height: 33px;
+}
+
+div.box18 > div > p {
+  color: gray;
+}
+div.box18 > div {
+  width: 25%;
+  height: 100%;
+  border-right: 1px lightgray solid;
+  gap: 10px;
+  padding: 10px;
+}
+div.box18 > div > div {
+  width: 80%;
+  height: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto;
+}
+div.box18 > div > div > a {
+  flex-grow: 2;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-right: 1px lightgray solid;
+  border-top: 1px lightgray solid;
+  padding: 8px;
+}
+div.box18 > div > div > a:nth-child(2n + 1) {
+  border-right: none;
+}
+div.box18 > div > div > a:nth-child(2) {
+  border-top: none;
+}
+div.box18 > div > div > a:nth-child(1) {
+  border-top: none;
+}
+
+div.box18 > div > div > a > img {
+  width: 100%;
+}
+div.box18 > div > a {
+  margin-top: 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #18bfd3;
+}
+/* part17 (1photo nilper) */
+div.box19 {
+  margin: 20px 0;
+  height: 170px;
+}
+
+div.box19 > a > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+}
+/* part18 (mahsoolat haraj montakhab) */
+div.box20 {
+  height: 835px;
+  border: 1px lightgray solid;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  gap: 25px;
+  margin: 20px 0;
+}
+div.box20 > p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: x-large;
+}
+div.box20 > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row-reverse wrap;
+  align-items: center;
+  padding: 0 20px;
+}
+div.box20 > div > a {
+  width: 16.66%;
+  height: 33.3%;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 12px 8px;
+  border: 1px lightgray solid;
+  border-left: none;
+  border-top: none;
+  color: black;
+}
+div.box20 > div > a:nth-child(1) {
+  border-right: none;
+}
+div.box20 > div > a:nth-child(7) {
+  border-right: none;
+}
+div.box20 > div > a:nth-child(13) {
+  border-right: none;
+}
+div.box20 > div > a > div.image2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+div.box20 > div > a > div.image2 > img {
+  width: 150px;
+  height: 150px;
+}
+div.box20 > div > a > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+div.box20 > div > a > div > div {
+  height: 95%;
+  width: 15%;
+  padding: 0 4px;
+  color: white;
+  font-size: small;
+  border-radius: 10px;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.box20 > div > a > div > p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+div.box20 > div > a > span {
+  padding: 0 10%;
+  color: gray;
+  text-decoration: line-through;
+}
+.border-left2 {
+  border-bottom-left-radius: 18px;
+}
+.border-right2 {
+  border-bottom-right-radius: 18px;
+}
+/* part19 (daagh tarin chand saat gozashteh) */
+div.box21 {
+  height: 405px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 18px;
+  border: 1px lightgray solid;
+  margin-bottom: 20px;
+}
+div.box21 > span {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  padding-right: 40%;
+}
+div.box21 > span > p {
+  display: flex;
+  align-items: center;
+  font-size: x-large;
+  gap: 5px;
+  text-align: center;
+}
+div.box21 > span > a {
+  text-decoration: none;
+  color: #18bfd3;
+}
+div.box21 > div {
+  width: 100%;
+  height: 90%;
+  direction: rtl;
+}
+
+div.box21 > div > div > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-evenly;
+
+  gap: 2px;
+}
+div.box21 > div div > div > div > a {
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+div.box21 > div div > div > div > a > img {
+  width: 90px;
+  height: 90px;
+}
+div.box21 > div div > div > div > a > span {
+  font-size: x-large;
+  font-weight: bold;
+  color: #18bfd3;
+}
+div.box21 > div div > div > div > a > p {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  height: 100%;
+  border-bottom: 1px lightgray solid;
+  padding: 5px;
+}
+div.box21 > div div > div > div > a > p.no-border {
+  border: none;
+}
+/* part20 (khandani ha) */
+div.box22 {
+  width: 100%;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2%;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+div.box22 > span {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+div.box22 > span > a {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  text-decoration: none;
+  color: black;
+  padding: 7px;
+  font-size: small;
+  color: #18bfd3;
+  gap: 2px;
+}
+
+div.box22 > div {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1%;
+}
+div.box22 > div > a {
+  width: 24%;
+  height: 90%;
+  border-radius: 10px;
+  border: 1px lightgray solid;
+  text-decoration: none;
+  color: black;
+  line-height: 24px;
+}
+div.box22 > div > a > img {
+  width: 100%;
+  height: 75%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+div.box22 > div > a > p {
+  padding: 8px 15px;
+  direction: rtl;
+}
+/* part21 (footer) */
+div.box23 {
+  border: 1px lightgray solid;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+div.box23 > div.n14 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+div.box23 > div.n14 > a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: gray;
+  padding: 10px 20px;
+  border: 1px lightgray solid;
+  border-radius: 10px;
+  gap: 5px;
+}
+div.box23 > div.n15 {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+div.box23 > div.n15 > span {
+  padding: 0px 25px;
+  border-left: 2px gray solid;
+}
+div.box23 > div.n15 > span:nth-child(3) {
+  border-left: none;
+}
+div.box23 > div.n16 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.box23 > div.n16 > a {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  text-decoration: none;
+  color: black;
+  font-size: small;
+}
+div.box23 > div.n17 {
+  display: flex;
+  flex-direction: row-reverse;
+}
+div.box23 > div.n17 > div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  direction: rtl;
+  padding: 15px;
+
+  width: 25%;
+}
+div.box23 > div.n17 > div > p {
+  font-size: x-large;
+}
+div.box23 > div.n17 > div > a {
+  text-decoration: none;
+  color: gray;
+}
+div.box23 > div.n17 > div > span {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+div.box23 > div.n17 > div > span > a {
+  text-decoration: none;
+}
+div.box23 > div.n17 > div > div {
+  display: flex;
+  gap: 10px;
+}
+div.box23 > div.n17 > div > div > input {
+  height: 45px;
+  width: 250px;
+  border-radius: 10px;
+  background-color: lightgray;
+  padding: 0 10px;
+}
+div.box23 > div.n17 > div > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgray;
+  width: 50px;
+  height: 45px;
+  border-radius: 10px;
+  color: white;
+}
+div.box23 > div.n18 {
+  padding: 15px;
+  width: 100%;
+  height: 76px;
+  background-color: #3c4b6d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  border-radius: 18px;
+}
+div.box23 > div.n18 > div {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 10px;
+}
+div.box23 > div.n18 > div > img {
+  width: 44px;
+  height: 44px;
+}
+div.box23 > div.n18 > div > p {
+  color: white;
+  font-size: x-large;
+}
+div.box23 > div.n18 > span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+  gap: 15px;
+  border-radius: 18px;
+}
+div.box23 > div.n18 > span > a {
+  height: 100%;
+}
+div.box23 > div.n18 > span > a > img {
+  height: 100%;
+}
+div.box23 > div.n18 > span > span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+div.box23 > div.n18 > span > span > a > img {
+  height: 40px;
+  width: 45px;
+}
+div.box23 > div.n19 {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 40px;
+  padding: 45px 10px;
+  border-top: 1px lightgray solid;
+  border-bottom: 1px lightgray solid;
+}
+div.box23 > div.n19 > div {
+  display: flex;
+  direction: rtl;
+  flex-direction: column;
+  line-height: 28px;
+}
+div.box23 > div.n19 > div > h2 {
+  color: #595c62;
+}
+div.box23 > div.n19 > div > p {
+  color: gray;
+}
+div.box23 > div.n19 > div > p > span {
+  font-weight: bold;
+}
+div.box23 > div.n19 > div > a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #18bfd3;
+}
+div.box23 > div.n19 > span {
+  display: flex;
+  align-items: start;
+  flex-direction: row-reverse;
+  gap: 10px;
+}
+div.box23 > div.n19 > span > a {
+  padding: 10px;
+  border: 1px lightgray solid;
+  border-radius: 10px;
+}
+div.box23 > div.n19 > span > a > img {
+  width: 75px;
+  height: 75px;
+}
+div.box23 > p {
+  width: 100%;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: gray;
+}
+div.box24 {
+  height: 150px;
+  background-color: #f0f0f1;
+  display: flex;
+  flex-direction: column;
+}
+div.box24 > div {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  direction: rtl;
+}
+div.box24 > div > a {
+  height: 100%;
+  width: 100%;
+  flex-grow: 1;
+  border: 1px lightgray solid;
+  padding: 25px;
+}
+div.box24 > div > a > img {
+  height: 100%;
+  width: 100%;
+}
+/* part22 (button fixed) */
+div.box25 {
+  width: 100%;
+  direction: rtl;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 50px;
+  z-index: 999;
+}
+div.box25 > a {
+  text-decoration: none;
+}
+div.box25 > a.first > img {
+  padding: 15px;
+  background-color: red;
+  border-radius: 50%;
+}
+div.box25 > a.second {
+  display: flex;
+  gap: 4%;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding: 15px 18px;
+  background-color: rgb(4, 156, 4);
+  border-radius: 40px;
+  text-decoration: none;
+  color: white;
+  transition: 300ms;
+}
+div.box25 > a.second > span {
+  display: none;
+}
+div.box25 > a.second:hover {
+  padding: 10px 30px;
+}
+div.box25 > a.second:hover > span {
+  display: inline-block;
+}
+div.box25 > a.second:hover > p {
+  border-left: 1px lightgray solid;
+  padding: 0 10px;
+}
